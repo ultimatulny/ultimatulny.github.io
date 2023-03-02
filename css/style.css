@@ -1,0 +1,253 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    font-style: normal;
+    font-weight: 400;
+    src: local("TT Lakes"),
+         url("../fonts/TTLakes-Regular.ttf") format("ttf"),
+         url("../fonts/TTLakes-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    font-style: normal;
+    font-weight: 600;
+    src: local("TT Lakes"),
+         url("../fonts/TTLakes-Medium.ttf") format("ttf"),
+         url("../fonts/TTLakes-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    font-style: normal;
+    font-weight: 800;
+    src: local("TT Lakes"),
+         url("../fonts/TTLakes-Bold.ttf") format("ttf"),
+         url("../fonts/TTLakes-Bold.woff") format("woff");
+}
+
+body {
+    font-family: "TT Lakes", "Arial", sans-serif;
+    background-color: #F8F8F8;
+}
+
+.header {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 87px;
+    border-bottom: 1px solid #D9FFF5;
+}
+
+.header > div {
+    display: flex;
+}
+
+.header__button {
+    display: flex;
+    align-self: center;
+}
+
+.header__logo-section .header__divider {
+    display: none;
+}
+
+.header__social {
+    display: none;
+}
+
+.header-burger {
+    margin-left: 16px;
+}
+
+.header__button {
+    margin-right: 16px;
+}
+
+.header__divider {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.nav {
+
+}
+
+.nav__header{
+    font-weight: bold;
+    margin-left: 16px;
+    margin-top: 24px;
+    font-size: 28px;
+    position: relative;
+}
+
+.nav__header::before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    width: 4px;
+    height: 40px;
+    background-color: #41f6d7;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.nav__menu {
+    display: flex;
+    overflow-x: scroll;
+    margin-left: 16px;
+    white-space: nowrap;
+    align-items: center;
+    align-content: flex-end;
+}
+
+.nav__button {
+    text-decoration: none;
+    font-weight: 400;
+    color: #7E7E82;
+    font-size: 16px;
+    display: block;
+    padding: 9px 22px;
+}
+
+.nav__button--active {
+    background: #FFFFFF;
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    
+}
+
+.nav__actions {
+    display: none;
+}
+
+.nav__action-btn:hover {
+    cursor: pointer;
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column;   
+}
+
+.main-info__text {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 24px;
+    font-size: 14px;
+}
+
+.main-info__button {
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    margin-left: 48px;
+    margin-top: 16px;
+}
+
+.main-info__button::before {
+    content: url('../icons/arrow.svg');
+    position: absolute;
+    left: -16px;
+}
+
+.main-info__image {
+    margin-top: 13px;
+    width: 100%;
+    height: auto;
+}
+
+.main-info__button:hover {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 320px){
+    .main-info__text {
+        height: 95px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main-info {
+        flex-direction: row;
+    }
+    .main-info__image {
+        width: 360px;
+        border-radius: 8px;
+        margin-top: 25px;
+        margin-right: 25px;
+    }
+    .main-info__text {
+        height: 115px;
+        overflow: hidden;
+        margin-right: 48px;
+    }
+
+    .header__social {
+        display: flex;
+    }
+    .header__logo-section .header__divider {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1120px){
+    .header {
+        display: none;
+    }
+    .main-info__column {
+        flex: 1;
+    }
+    .main-info__image {
+        flex: 1;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+    }
+    .app {
+        max-width: 1120px;
+    }
+    .nav__menu {
+        flex-wrap: wrap;
+        overflow-x: hidden;
+    }
+    .nav__actions {
+        display: flex;
+    }
+    .nav__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav__action-btn {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+    }
+    .nav__action-btn div {
+        margin-right: 8px;
+    }
+    .nav__action-btn img {
+        margin-right: 32px;
+    }
+    .main-info__text {
+        height: auto;
+    }
+}
