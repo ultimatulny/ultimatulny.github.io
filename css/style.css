@@ -88,10 +88,6 @@ body {
     margin-right: 20px;
 }
 
-.nav {
-
-}
-
 .nav__header{
     font-weight: bold;
     margin-left: 16px;
@@ -302,10 +298,6 @@ body {
 
 .slide-menu__link:hover {
     opacity: 0.5;
-}
-
-.slide-menu__link span {
-    
 }
 
 .slide-menu__link:last-child {
