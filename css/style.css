@@ -261,6 +261,7 @@ body {
     justify-content: space-between;
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
     max-width: 320px;
+    overflow-y: auto;
 }
 
 .slide-menu__header {
@@ -280,10 +281,6 @@ body {
 
 .slide-menu__button:nth-child(3){
     margin-left: 78px;
-}
-
-.slide-menu__navigation {
-
 }
 
 .slide-menu__link {
