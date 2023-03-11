@@ -310,8 +310,8 @@ body {
 
 .slide-menu__link--active::before {
     content: "";
-    position: absolute;
-    left: 0px;
+    position: relative;
+    left: -24px;
     width: 4px;
     height: 32px;
     background-color: #41F6D7;
@@ -321,6 +321,7 @@ body {
 
 .slide-menu__bottom {
     margin-left: 24px;
+    margin-top: 100px;
 }
 
 .slide-menu__help-buttons {
