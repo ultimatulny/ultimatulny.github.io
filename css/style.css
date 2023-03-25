@@ -540,6 +540,7 @@ input[type="radio"]:checked + label {
     z-index: 10;
     font-family: "TT Lakes", "Arial", sans-serif;
     display: none;
+    border-left: 1px solid #D9FFF5;
   }
 
 
@@ -549,6 +550,7 @@ input[type="radio"]:checked + label {
     background: none;
     padding: 0;
     margin: 24px 0 0 16px;
+
   }
 
   .modal__name {
@@ -802,6 +804,11 @@ input[type="radio"]:checked + label {
             width: 440px;
             right: 0;
             box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+          }
+          .modal__close-btn {
+            position: absolute;
+            left: -80px;
+            top: -5px;
           }
         }
 
