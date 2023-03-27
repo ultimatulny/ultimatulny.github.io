@@ -815,9 +815,7 @@ input[type="radio"]:checked + label {
         }
 
         @media screen and (min-width: 1120px) {
-          .header {
-            display: none;
-          }
+          
           .main-info__column {
             flex: 1;
           }
@@ -865,8 +863,11 @@ input[type="radio"]:checked + label {
             margin-left: 24px;
           }
         }
-        
-        @media screen and (min-width: 1440px) {
+
+        @media screen and (min-width: 1366px) {
+          .header {
+            display: none;
+          }
           .slide-menu {
             display: block;
             position: static;
@@ -874,17 +875,25 @@ input[type="radio"]:checked + label {
           }
           .app {
             display: flex;
-            max-width: 1440px;
+            max-width: 1366px;
           }
           .slide-menu__header .slide-menu__button:first-child {
             display: none;
           }
+          .overlay {
+            z-index: 9;
+          }
           .commerce {
             margin-left: 32px;
             }
-            .overlay {
-                z-index: 9;
-              }
+        }
+        
+        @media screen and (min-width: 1440px) {
+          
+          .app {
+            max-width: 1440px;
+          }
+
           }
 
           .container--open {

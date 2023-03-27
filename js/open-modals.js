@@ -10,10 +10,12 @@ let menu = document.querySelector('.slide-menu');
 let close_menu_btn = document.querySelector('#slide-menu__close-btn');
 
 let call_btn = document.querySelector('#call-btn');
+let call_btn_header = document.querySelector('#call-btn-header');
 let call_modal = document.querySelector('.modal-call');
 let call_close_btn = document.querySelector('.call-close-btn');
 
 let feedback_btn = document.querySelector('#feedback-btn');
+let feedback_btn_header = document.querySelector('#feedback-btn-header');
 let feedback_modal = document.querySelector('.modal-feedback');
 let feedback_close_btn = document.querySelector('.feedback-close-btn');
 
@@ -61,12 +63,24 @@ call_btn.addEventListener('click', () => {
     openOverlay();
 })
 
+call_btn_header.addEventListener('click', () => {
+    feedback_modal.classList.remove('modal--open');
+    call_modal.classList.add('modal--open');
+    openOverlay();
+})
+
 call_close_btn.addEventListener('click', () => {
     call_modal.classList.remove('modal--open');
     if (windowInnerWidth >= 1440) closeOverlay();
 })
 
 feedback_btn.addEventListener('click', () => {
+    call_modal.classList.remove('modal--open');
+    feedback_modal.classList.add('modal--open');
+    openOverlay();
+})
+
+feedback_btn_header.addEventListener('click', () => {
     call_modal.classList.remove('modal--open');
     feedback_modal.classList.add('modal--open');
     openOverlay();
