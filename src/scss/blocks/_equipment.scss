@@ -1,0 +1,26 @@
+.equipment {
+  &__card {
+    box-sizing: border-box;
+    width: 240px;
+    height: 160px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    margin-left: 16px;
+    display: flex;
+    position: relative;
+    padding: 16px;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 600;
+    position: absolute;
+  }
+
+  &__card img {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+  }
+}

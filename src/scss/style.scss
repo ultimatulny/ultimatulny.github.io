@@ -1,0 +1,56 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'TT Lakes', 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  font-style: normal;
+  font-weight: 400;
+  src: local('TT Lakes'), url('../fonts/TTLakes-Regular.ttf') format('ttf'),
+    url('../fonts/TTLakes-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  font-style: normal;
+  font-weight: 600;
+  src: local('TT Lakes'), url('../fonts/TTLakes-Medium.ttf') format('ttf'),
+    url('../fonts/TTLakes-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  font-style: normal;
+  font-weight: 800;
+  src: local('TT Lakes'), url('../fonts/TTLakes-Bold.ttf') format('ttf'),
+    url('../fonts/TTLakes-Bold.woff') format('woff');
+}
+
+@import './blocks/header';
+@import './blocks/brands';
+@import './blocks/commerce';
+@import './blocks/equipment';
+@import './blocks/footer';
+@import './blocks/main-info';
+@import './blocks/modal';
+@import './blocks/open-button';
+@import './blocks/overlay';
+@import './blocks/services';
+@import './blocks/slide-menu';
+@import './blocks/swiper';
+
+@import './base/media';

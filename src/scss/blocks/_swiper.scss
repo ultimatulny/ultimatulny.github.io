@@ -1,0 +1,16 @@
+.swiper-slide {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 258px;
+}
+
+.swiper-pagination {
+  position: relative;
+}
+
+.swiper-pagination-bullet {
+  --swiper-pagination-bullet-inactive-color: #dddddd;
+}
+.swiper-pagination-bullet-active {
+  --swiper-theme-color: #b5b6bc;
+}

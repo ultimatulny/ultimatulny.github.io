@@ -1,0 +1,265 @@
+@media screen and (min-width: 320px) {
+  .main-info__text {
+    height: 95px;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 361px) {
+  .slide-menu {
+    width: 320px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .chapter-header {
+    margin-top: 50px;
+  }
+  .main-info {
+    flex-direction: row;
+    &__image {
+      width: 360px;
+      border-radius: 8px;
+      margin-top: 25px;
+      margin-right: 25px;
+    }
+    &__text {
+      height: 115px;
+      overflow: hidden;
+      margin-right: 48px;
+    }
+  }
+
+  .header {
+    &__social {
+      display: flex;
+    }
+    &__logo-section &__divider {
+      display: flex;
+    }
+  }
+
+  .brands {
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 16px;
+      margin-top: 24px;
+      height: 170px;
+    }
+    &__card {
+      width: 224px;
+      margin-left: 0;
+      margin-left: 24px;
+    }
+  }
+
+  .equipment {
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 16px;
+      margin-top: 24px;
+      height: 170px;
+    }
+    &__card {
+      width: 224px;
+    }
+  }
+
+  .swiper-slide {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .open-button {
+    display: block;
+  }
+
+  .services {
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+    &__card {
+      width: auto;
+      height: 64px;
+      margin-left: 24px;
+      margin-right: 24px;
+      border: none;
+      border-radius: 0;
+      background-color: white;
+      display: flex;
+      justify-content: flex-start;
+      position: relative;
+    }
+    &__card::after {
+      content: '';
+      position: absolute;
+      width: calc(100% - 32px);
+      height: 1px;
+      bottom: 0;
+      background-color: #eaeaea;
+    }
+
+    &__card:nth-child(2) {
+      border-top-right-radius: 6px;
+      border-top-left-radius: 6px;
+    }
+    &__card:nth-child(6) {
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+
+    &__card:nth-child(6)::after {
+      display: none;
+    }
+
+    &__header {
+      margin-left: 24px;
+      margin-right: 24px;
+      display: flex;
+      color: #7e7e82;
+      font-weight: 600;
+      margin-top: 31px;
+      padding: 0 16px;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    &__column:nth-child(1) {
+      width: 50%;
+    }
+    &__column:nth-child(2) {
+      width: 20%;
+    }
+    &__column:nth-child(3) {
+      width: 20%;
+    }
+    &__column:nth-child(4) {
+      min-width: 119px;
+    }
+
+    &__order {
+      margin-left: auto;
+    }
+    &__head {
+      display: none;
+    }
+  }
+
+  .commerce {
+    margin-left: 24px;
+  }
+  .footer {
+    flex-direction: row;
+    padding: 0 24px;
+    &__elem {
+      text-align: start;
+      margin-top: 32px;
+      width: 33%;
+    }
+    &__elem:last-child {
+      text-align: end;
+    }
+  }
+
+  .modal {
+    width: 440px;
+    right: 0;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+      16px 0px 52px rgba(14, 24, 80, 0.2);
+    &__close-btn {
+      position: absolute;
+      left: -80px;
+      top: -5px;
+    }
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .main-info {
+    &__column {
+      flex: 1;
+    }
+    &__image {
+      flex: 1;
+    }
+  }
+
+  .app {
+    margin: 0 auto;
+    max-width: 1120px;
+  }
+  .main-content {
+    max-width: 1120px;
+  }
+
+  .nav {
+    &__menu {
+      flex-wrap: wrap;
+      overflow-x: hidden;
+    }
+    &__actions {
+      display: flex;
+    }
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__action-btn {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+    }
+    &__action-btn div {
+      margin-right: 8px;
+    }
+    &__action-btn img {
+      margin-right: 32px;
+    }
+  }
+
+  .main-info__text {
+    height: auto;
+  }
+  .brands__card {
+    width: 240px;
+  }
+  .equipment__card {
+    width: 240px;
+    margin-left: 24px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .header {
+    display: none;
+  }
+  .slide-menu {
+    display: block;
+    position: static;
+    height: auto;
+    &__header &__button:first-child {
+      display: none;
+    }
+  }
+  .app {
+    display: flex;
+    max-width: 1366px;
+  }
+
+  .overlay {
+    z-index: 9;
+  }
+  .commerce {
+    margin-left: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .app {
+    max-width: 1440px;
+  }
+}

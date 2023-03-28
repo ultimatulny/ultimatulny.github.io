@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Макет 1.6</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -32,31 +31,47 @@
   <body>
     <div class="overlay"></div>
     <div class="app">
-<div class="modal modal-feedback ">
+      <div class="modal modal-feedback">
         <button class="modal__close-btn feedback-close-btn">
-          <img src="icons/close.svg" alt="Close button">
+          <img src="icons/close.svg" alt="Close button" />
         </button>
         <h2 class="modal__name">Обратная связь</h2>
         <form action="#" method="post" class="modal__form">
-          <input type="text" placeholder="Имя" class="modal__input">
-          <input type="phone" placeholder="Телефон" class="modal__input">
-          <input type="email" placeholder="Электронная почта" class="modal__input">
-          <textarea name="message" class="modal__input modal__placeholder" placeholder="Сообщение"></textarea>
-          <p class="modal__rules">Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a></p>
+          <input type="text" placeholder="Имя" class="modal__input" />
+          <input type="phone" placeholder="Телефон" class="modal__input" />
+          <input
+            type="email"
+            placeholder="Электронная почта"
+            class="modal__input"
+          />
+          <textarea
+            name="message"
+            class="modal__input modal__placeholder"
+            placeholder="Сообщение"
+          ></textarea>
+          <p class="modal__rules"
+            >Нажимая “отправить”, вы даете согласие на
+            <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
+            <a href="#">политикой конфиденциальности</a></p
+          >
           <button class="modal__submit">
             <div>Отправить</div>
             <img src="icons/goside.svg" alt="Goside" />
           </button>
         </form>
       </div>
-      <div class="modal modal-call ">
+      <div class="modal modal-call">
         <button class="modal__close-btn call-close-btn">
-          <img src="icons/close.svg" alt="Close button">
+          <img src="icons/close.svg" alt="Close button" />
         </button>
         <h2 class="modal__name">Заказать звонок</h2>
         <form action="#" method="post" class="modal__form">
-          <input type="phone" placeholder="Телефон" class="modal__input">
-          <p class="modal__rules">Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a></p>
+          <input type="phone" placeholder="Телефон" class="modal__input" />
+          <p class="modal__rules"
+            >Нажимая “отправить”, вы даете согласие на
+            <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
+            <a href="#">политикой конфиденциальности</a></p
+          >
           <button class="modal__submit">
             <div>Отправить</div>
             <img src="icons/goside.svg" alt="Goside" />
@@ -198,7 +213,7 @@
             </div>
 
             <img
-              src="media/image.png"
+              src="img/image.png"
               alt="Логотип CPS"
               class="main-info__image"
             />
@@ -412,19 +427,24 @@
               единичную услугу. Для получения коммерческого предложения на
               постоянное обслуживание, оставьте заявку.
             </p>
-            <a href="#" class="commerce__link">Получить коммерческое предложение</a>
+            <a href="#" class="commerce__link"
+              >Получить коммерческое предложение</a
+            >
           </aside>
           <footer class="footer">
-            <div class="footer__elem">&copy; 2019 CPS <br> Разработано командой Apesong</div>
+            <div class="footer__elem"
+              >&copy; 2019 CPS <br />
+              Разработано командой Apesong</div
+            >
             <div class="footer__elem">Политика конфиденциальности</div>
-            <div class="footer__elem">Информация, размещенная на данной странице, не является публичной офертой</div>
+            <div class="footer__elem"
+              >Информация, размещенная на данной странице, не является публичной
+              офертой</div
+            >
           </footer>
         </main>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="js/swiper-init.js"></script>
-    <script src="js/open-brands.js"></script>
- <script src="js/open-modals.js"></script>
   </body>
 </html>
