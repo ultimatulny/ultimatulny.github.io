@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Webpack 4 Starter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/favicon-16x16.png">
+    <link rel="manifest" href="icons/favicon/site.webmanifest">
+  <link href="style.css" rel="stylesheet"></head>
+  <body>
+    <div class="overlay"></div>
+    <div class="app">
+      <div class="modal modal-feedback">
+        <button class="modal__close-btn feedback-close-btn">
+          <img src="icons/close.svg" alt="Close button">
+        </button>
+        <h2 class="modal__name">Обратная связь</h2>
+        <form action="#" method="post" class="modal__form">
+          <input type="text" placeholder="Имя" class="modal__input">
+          <input type="phone" placeholder="Телефон" class="modal__input">
+          <input type="email" placeholder="Электронная почта" class="modal__input">
+          <textarea name="message" class="modal__input modal__placeholder" placeholder="Сообщение"></textarea>
+          <p class="modal__rules">Нажимая “отправить”, вы даете согласие на
+            <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
+            <a href="#">политикой конфиденциальности</a></p>
+          <button class="modal__submit">
+            <div>Отправить</div>
+            <img src="icons/goside.svg" alt="Goside">
+          </button>
+        </form>
+      </div>
+      <div class="modal modal-call">
+        <button class="modal__close-btn call-close-btn">
+          <img src="icons/close.svg" alt="Close button">
+        </button>
+        <h2 class="modal__name">Заказать звонок</h2>
+        <form action="#" method="post" class="modal__form">
+          <input type="phone" placeholder="Телефон" class="modal__input">
+          <p class="modal__rules">Нажимая “отправить”, вы даете согласие на
+            <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
+            <a href="#">политикой конфиденциальности</a></p>
+          <button class="modal__submit">
+            <div>Отправить</div>
+            <img src="icons/goside.svg" alt="Goside">
+          </button>
+        </form>
+      </div>
+      <div class="slide-menu slide-menu--hide">
+        <div class="slide-menu__top">
+          <header class="slide-menu__header">
+            <div class="slide-menu__button" id="slide-menu__close-btn">
+              <img src="icons/close.svg" alt="Close button">
+            </div>
+            <div class="slide-menu__logo">
+              <img src="icons/logo.svg" alt="Logo">
+            </div>
+            <div class="slide-menu__button">
+              <img src="icons/search.svg" alt="Search button">
+            </div>
+          </header>
+          <nav class="slide-menu__navigation">
+            <a href="#" class="slide-menu__link slide-menu__link--active"><div>Ремонт техники</div></a>
+            <a href="#" class="slide-menu__link">Услуги и сервисы</a>
+            <a href="#" class="slide-menu__link">Корпоративным клиентам</a>
+            <a href="#" class="slide-menu__link">Продавцам техники</a>
+            <a href="#" class="slide-menu__link">Партнерам</a>
+            <a href="#" class="slide-menu__link">Производителям</a>
+            <a href="#" class="slide-menu__link">Наши сервисные центры</a>
+            <a href="#" class="slide-menu__link">Контакты</a>
+          </nav>
+        </div>
+        <div class="slide-menu__bottom">
+          <div class="slide-menu__help-buttons">
+            <div class="slide-menu__help-button" id="call-btn">
+              <img src="icons/call.svg" alt="Call button">
+            </div>
+            <div class="slide-menu__help-button" id="feedback-btn">
+              <img src="icons/chat.svg" alt="Chat button">
+            </div>
+            <div class="slide-menu__help-button">
+              <img src="icons/profile.svg" alt="Profile button">
+            </div>
+          </div>
+          <div class="slide-menu__email-address">mail@cps.com</div>
+          <div class="slide-menu__phone-number">8 800 890 8900</div>
+          <div class="slide-menu__langs">
+            <input type="radio" name="lang" id="lang-ru" checked="checked">
+            <label class="slide-menu__lang" for="lang-ru">RU</label>
+
+            <input type="radio" name="lang" id="lang-en">
+            <label class="slide-menu__lang" for="lang-en">EN</label>
+
+            <input type="radio" name="lang" id="lang-ch">
+            <label class="slide-menu__lang" for="lang-ch">CH</label>
+          </div>
+        </div>
+      </div>
+      <div class="main-content">
+        <header class="header">
+          <div class="header__logo-section">
+            <div class="header-burger header__button" id="open-menu">
+              <img src="icons/burger.svg" alt="Menu">
+            </div>
+            <div class="header__divider">
+              <img src="icons/divider.svg" alt="Divider">
+            </div>
+            <div class="logo header__logo">
+              <img src="icons/logo.svg" alt="Logo">
+            </div>
+          </div>
+
+          <div class="header__actions">
+            <div class="header__social">
+              <div class="header__button" id="call-btn-header">
+                <img src="icons/call.svg" alt="Call">
+              </div>
+
+              <div class="header__button" id="feedback-btn-header">
+                <img src="icons/chat.svg" alt="Chat">
+              </div>
+
+              <div class="header__button">
+                <img src="icons/profile.svg" alt="Profile">
+              </div>
+            </div>
+
+            <div class="header__divider">
+              <img src="icons/divider.svg" alt="Divider">
+            </div>
+
+            <div class="header__button">
+              <img src="icons/repair.svg" alt="Repair">
+            </div>
+
+            <div class="header__button">
+              <img src="icons/checkstatus.svg" alt="Check status">
+            </div>
+          </div>
+        </header>
+        <main class="main">
+          <nav class="nav">
+            <div class="nav__info">
+              <h1 class="nav__header">Услуги и сервисы</h1>
+              <div class="nav__actions">
+                <div class="nav__action-btn">
+                  <div>Оставить заявку</div>
+                  <img src="icons/repair.svg" alt="Repair">
+                </div>
+                <div class="nav__action-btn">
+                  <div>Статус ремонта</div>
+                  <img src="icons/checkstatus.svg" alt="Check status">
+                </div>
+              </div>
+            </div>
+            <div class="nav__menu">
+              <a href="#" class="nav__button nav__button--active">Ремонтируемые устройства</a>
+              <a href="#" class="nav__button">Дополнительные услуги</a>
+              <a href="#" class="nav__button">Цены на услуги</a>
+              <a href="#" class="nav__button">Адреса сервисных центров</a>
+              <a href="#" class="nav__button">Специальные цены</a>
+              <a href="#" class="nav__button">Отзывы</a>
+            </div>
+          </nav>
+          <section class="main-info">
+            <div class="main-info__column">
+              <div class="main-info__text">
+                Мы являемся авторизованным сервисным центром по ремонту техники
+                Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+                официальной гарантией производителя. <br><br>
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                партнера, что подтверждает большое количество постоянных
+                клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
+                и, в свою очередь, советуют нас родным и близким.
+              </div>
+              <div class="main-info__button">Читать далее</div>
+            </div>
+
+            <img src="img/image.png" alt="Логотип CPS" class="main-info__image">
+          </section>
+          <div class="brands">
+            <header class="chapter-header brands__header">
+              <div>РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</div>
+            </header>
+            <div class="swiper">
+              <div class="swiper-wrapper brands__container">
+                <div class="brands__card swiper-slide">
+                  <img src="icons/brands/1.png" alt="Logo">
+                  <img src="icons/go.svg" alt="Go">
+                </div>
+                <div class="brands__card swiper-slide">
+                  <img src="icons/brands/2.png" alt="Logo">
+                  <img src="icons/go.svg" alt="Go">
+                </div>
+                <div class="brands__card swiper-slide">
+                  <img src="icons/brands/3.png" alt="Logo">
+                  <img src="icons/go.svg" alt="Go">
+                </div>
+                <div class="brands__card swiper-slide">
+                  <img src="icons/brands/4.png" alt="Logo">
+                  <img src="icons/go.svg" alt="Go">
+                </div>
+                <div class="brands__card swiper-slide">
+                  <img src="icons/brands/5.png" alt="Logo">
+                  <img src="icons/go.svg" alt="Go">
+                </div>
+                <div class="brands__card swiper-slide">
+                  <img src="icons/brands/6.png" alt="Logo">
+                  <img src="icons/go.svg" alt="Go">
+                </div>
+                <div class="brands__card swiper-slide">
+                  <img src="icons/brands/7.png" alt="Logo">
+                  <img src="icons/go.svg" alt="Go">
+                </div>
+                <div class="brands__card swiper-slide">
+                  <img src="icons/brands/8.png" alt="Logo">
+                  <img src="icons/go.svg" alt="Go">
+                </div>
+                <div class="brands__card swiper-slide">
+                  <img src="icons/brands/1.png" alt="Logo">
+                  <img src="icons/go.svg" alt="Go">
+                </div>
+                <div class="brands__card swiper-slide">
+                  <img src="icons/brands/2.png" alt="Logo">
+                  <img src="icons/go.svg" alt="Go">
+                </div>
+                <div class="brands__card swiper-slide">
+                  <img src="icons/brands/3.png" alt="Logo">
+                  <img src="icons/go.svg" alt="Go">
+                </div>
+              </div>
+
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="open-button brands__button">Показать все</div>
+          </div>
+
+          <div class="equipment">
+            <header class="chapter-header equipment__header">
+              <div>РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</div>
+            </header>
+            <div class="swiper">
+              <div class="swiper-wrapper equipment__container">
+                <div class="equipment__card swiper-slide">
+                  <div class="equipment__text">Ремонт ноутбуков</div>
+                  <img src="icons/go.svg" alt="Go">
+                </div>
+                <div class="equipment__card swiper-slide">
+                  <div class="equipment__text">Ремонт планшетов</div>
+                  <img src="icons/go.svg" alt="Go">
+                </div>
+                <div class="equipment__card swiper-slide">
+                  <div class="equipment__text">Ремонт ПК</div>
+                  <img src="icons/go.svg" alt="Go">
+                </div>
+                <div class="equipment__card swiper-slide">
+                  <div class="equipment__text">Ремонт мониторов</div>
+                  <img src="icons/go.svg" alt="Go">
+                </div>
+                <div class="equipment__card swiper-slide">
+                  <div class="equipment__text">Ремонт смартфонов</div>
+                  <img src="icons/go.svg" alt="Go">
+                </div>
+                <div class="equipment__card swiper-slide">
+                  <div class="equipment__text">Ремонт чайников</div>
+                  <img src="icons/go.svg" alt="Go">
+                </div>
+              </div>
+
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="open-button equipment__button">Показать все</div>
+          </div>
+
+          <div class="services">
+            <header class="chapter-header">
+              <div>ЦЕНЫ НА УСЛУГИ</div>
+            </header>
+            <div class="swiper">
+              <div class="swiper-wrapper services__container">
+                <div class="services__header">
+                  <div class="services__column">Ремонтные услуги</div>
+                  <div class="services__column">Цена</div>
+                  <div class="services__column">Срок</div>
+                  <div class="services__column"></div>
+                </div>
+                <div class="services__card swiper-slide">
+                  <div class="services__column">
+                    <div class="services__head">Ремонтные услуги</div>
+                    Диагностика
+                  </div>
+
+                  <div class="services__column">
+                    <div class="services__head">Цена</div>
+                    Бесплатно
+                  </div>
+                  <div class="services__column">
+                    <div class="services__head">Срок</div>
+                    30 мин
+                  </div>
+                  <button class="services__order">
+                    <div>ЗАКАЗАТЬ</div>
+                    <img src="icons/goside.svg" alt="Goside">
+                  </button>
+                </div>
+
+                <div class="services__card swiper-slide">
+                  <div class="services__column">
+                    <div class="services__head">Ремонтные услуги</div>
+                    Замена дисплея
+                  </div>
+                  <div class="services__column">
+                    <div class="services__head">Цена</div>
+                    1000 ₽
+                  </div>
+                  <div class="services__column">
+                    <div class="services__head">Срок</div>
+                    30-120 мин
+                  </div>
+                  <button class="services__order">
+                    <div>ЗАКАЗАТЬ</div>
+                    <img src="icons/goside.svg" alt="Goside">
+                  </button>
+                </div>
+                <div class="services__card swiper-slide">
+                  <div class="services__column">
+                    <div class="services__head">Ремонтные услуги</div>
+                    Замена полифонического динамика
+                  </div>
+                  <div class="services__column">
+                    <div class="services__head">Цена</div>
+                    1000 ₽
+                  </div>
+                  <div class="services__column">
+                    <div class="services__head">Срок</div>
+                    30-120 мин
+                  </div>
+                  <button class="services__order">
+                    <div>ЗАКАЗАТЬ</div>
+                    <img src="icons/goside.svg" alt="Goside">
+                  </button>
+                </div>
+                <div class="services__card swiper-slide">
+                  <div class="services__column">
+                    <div class="services__head">Ремонтные услуги</div>
+                    Тестирование с выдачей технического заключения
+                  </div>
+                  <div class="services__column">
+                    <div class="services__head">Цена</div>
+                    1000 ₽
+                  </div>
+                  <div class="services__column">
+                    <div class="services__head">Срок</div>
+                    30-120 мин
+                  </div>
+                  <button class="services__order">
+                    <div>ЗАКАЗАТЬ</div>
+                    <img src="icons/goside.svg" alt="Goside">
+                  </button>
+                </div>
+                <div class="services__card swiper-slide">
+                  <div class="services__column">
+                    <div class="services__head">Ремонтные услуги</div>
+                    Замена программного обеспечения
+                  </div>
+                  <div class="services__column">
+                    <div class="services__head">Цена</div>
+                    1000 ₽
+                  </div>
+                  <div class="services__column">
+                    <div class="services__head">Срок</div>
+                    30-120 мин
+                  </div>
+                  <button class="services__order">
+                    <div>ЗАКАЗАТЬ</div>
+                    <img src="icons/goside.svg" alt="Goside">
+                  </button>
+                </div>
+              </div>
+
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <aside class="commerce">
+            <p>
+              Все цены указаны с учетом НДС. Стоимость ремонта указана на
+              единичную услугу. Для получения коммерческого предложения на
+              постоянное обслуживание, оставьте заявку.
+            </p>
+            <a href="#" class="commerce__link">Получить коммерческое предложение</a>
+          </aside>
+          <footer class="footer">
+            <div class="footer__elem">&copy; 2019 CPS <br>
+              Разработано командой Apesong</div>
+            <div class="footer__elem">Политика конфиденциальности</div>
+            <div class="footer__elem">Информация, размещенная на данной странице, не является публичной
+              офертой</div>
+          </footer>
+        </main>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="./js/bundle.js"></script></body>
+</html>
