@@ -3,8 +3,8 @@
     box-sizing: border-box;
     width: 260px;
     height: 200px;
-    background-color: #ffffff;
-    border: 1px solid #eaeaea;
+    background-color: $simple-white;
+    border: 1px solid $grey;
     border-radius: 6px;
     margin-left: 16px;
     display: flex;
@@ -35,11 +35,11 @@
   }
 
   &__head {
-    color: #7e7e82;
+    color: $darkgrey;
   }
 
   &__order {
-    background-color: #ff3e79;
+    background-color: $strong-pink;
     width: 119px;
     height: 32px;
     border-radius: 16px;

@@ -6,7 +6,7 @@
   z-index: 10;
   font-family: 'TT Lakes', 'Arial', sans-serif;
   display: none;
-  border-left: 1px solid #d9fff5;
+  border-left: 1px solid $lightaqua;
   &__close-btn {
     border: none;
     outline: none;
@@ -33,7 +33,7 @@
     top: -3px;
     width: 4px;
     height: 40px;
-    background-color: #41f6d7;
+    background-color: $aqua;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
   }
@@ -43,16 +43,16 @@
     font-family: 'TT Lakes', 'Arial', sans-serif;
     width: 100%;
     border-radius: 8px;
-    border: 1px solid #eaeaea;
+    border: 1px solid $grey;
     padding: 12px 16px;
     margin-bottom: 16px;
-    color: #b5b6bc;
+    color: $typical-grey;
     font-size: 16px;
     font-weight: 600;
   }
 
   &__input::placeholder {
-    color: #b5b6bc;
+    color: $typical-grey;
   }
 
   &__placeholder {
@@ -62,19 +62,19 @@
 
   &__rules {
     font-size: 14px;
-    color: #7e7e82;
+    color: $darkgrey;
     margin: 0;
     line-height: 16px;
     font-weight: 600;
   }
 
   &__rules a {
-    color: #ff3e79;
+    color: $strong-pink;
     text-decoration: none;
   }
 
   &__submit {
-    background-color: #ff3e79;
+    background-color: $strong-pink;
     width: 136px;
     height: 32px;
     border-radius: 16px;

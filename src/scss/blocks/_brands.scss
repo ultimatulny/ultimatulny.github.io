@@ -3,8 +3,8 @@
     box-sizing: border-box;
     width: 240px;
     height: 72px;
-    background-color: #ffffff;
-    border: 1px solid #eaeaea;
+    background-color: $simple-white;
+    border: 1px solid $grey;
     border-radius: 6px;
     margin-left: 16px;
     display: flex;
@@ -16,9 +16,9 @@
 
 .chapter-header {
   height: 80px;
-  color: #7e7e82;
-  background-image: linear-gradient(#f8f8f8, #ffffff);
-  border-top: 1px solid #d9fff5;
+  color: $darkgrey;
+  background-image: linear-gradient($lightgrey, $simple-white);
+  border-top: 1px solid $lightaqua;
   display: flex;
   align-items: center;
   padding: 16px;

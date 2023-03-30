@@ -256,6 +256,12 @@
   .commerce {
     margin-left: 32px;
   }
+  .nav {
+    &__header::before {
+      border-radius: 2px;
+      left: -14px;
+    }
+  }
 }
 
 @media screen and (min-width: 1440px) {

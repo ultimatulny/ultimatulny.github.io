@@ -79,7 +79,6 @@ module.exports = {
       filename: 'style.css'
     }),
 
-    // Копируем картинки
     new CopyWebpackPlugin([
       {
         from: './src/img',

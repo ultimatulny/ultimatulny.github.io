@@ -1,6 +1,7 @@
 import '../scss/style.scss'
 import { swiper } from './swiper-init'
 
+// open-button
 let brandsBtn = document.querySelector('.brands__button')
 let equipmentBtn = document.querySelector('.equipment__button')
 
@@ -16,6 +17,7 @@ equipmentBtn.addEventListener('click', () => {
   equipmentBtn.classList.toggle('container__button--open')
 })
 
+// modal
 let windowInnerWidth = document.documentElement.clientWidth
 window.addEventListener('resize', () => {
   windowInnerWidth = document.documentElement.clientWidth
@@ -37,6 +39,8 @@ let feedback_btn_header = document.querySelector('#feedback-btn-header')
 let feedback_modal = document.querySelector('.modal-feedback')
 let feedback_close_btn = document.querySelector('.feedback-close-btn')
 
+let slide_menu_open = false
+
 function openOverlay() {
   document.body.classList.add('lock-body')
   overlay.classList.add('overlay-visible--on')
@@ -52,6 +56,7 @@ function closeSlideMenu() {
   menu.classList.remove('slide-menu--open')
   menu.classList.remove('slide-menu--shadow--on')
   closeOverlay()
+  slide_menu_open = false
 }
 
 function openSlideMenu() {
@@ -59,6 +64,7 @@ function openSlideMenu() {
   menu.classList.remove('slide-menu--hide')
   menu.classList.add('slide-menu--shadow--on')
   openOverlay()
+  slide_menu_open = true
 }
 
 open_menu_btn.addEventListener('click', () => {
@@ -89,7 +95,7 @@ call_btn_header.addEventListener('click', () => {
 
 call_close_btn.addEventListener('click', () => {
   call_modal.classList.remove('modal--open')
-  if (windowInnerWidth >= 1440) closeOverlay()
+  if (windowInnerWidth >= 1366 || !slide_menu_open) closeOverlay()
 })
 
 feedback_btn.addEventListener('click', () => {
@@ -106,5 +112,5 @@ feedback_btn_header.addEventListener('click', () => {
 
 feedback_close_btn.addEventListener('click', () => {
   feedback_modal.classList.remove('modal--open')
-  if (windowInnerWidth >= 1440) closeOverlay()
+  if (windowInnerWidth >= 1366 || !slide_menu_open) closeOverlay()
 })
